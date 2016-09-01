@@ -1,0 +1,40 @@
+[Classes]
+
+- Classes created by Yajun Shi
+
+Main: The main class for running the game;
+
+Player: The user-controlled actor, has abilities of moving and shooting.
+
+Enemy: An enemy actor, moving straight down from the upper edge of the game window. Exploded if hit by bullet, game over if hit by player.
+
+BangManager: The manager of the game, controls game flow. Records points, generates enemies and bullet packages.
+
+- Classes created by Xun Liu
+
+Enemy2: This class is a upper class of Enemy. It will creates new type enemy which will fire at player. 
+
+Enemy3: This class is a upper class of Enemy. It will creates new type enemy which has massive firepower and hard to kill. 
+
+EnemyBullet: This class is a upper class of Angel 2D’s build in Class: PhysicsActor. The class has two functions. The EnemyBullet() will takes a Enemy class variable as input, and creates the bullet for enemy2. The Update() will update bullet’s current position and status by using Angel 2D’s build in function: PhysicsActor::Update().
+
+EnemyLBullet & EnemyRBullet: Those classes are upper class of EnemyBullet. They will create left side-shooting and right side-shooting bullets for enemy3. 
+
+Bullet: This class is a upper class of Angel 2D’s build in Class: PhysicsActor, it’s also a basic class for player’s bullet. The class has two functions. The Bullet() is used to initialize the bullet. It will takes Player class variable, which contains player’s current position, as input. The Update() will update bullet’s current position and status by using Angel 2D’s build in function: PhysicsActor::Update(). If bullet is out of the screen, the Update() will also “destroy” it.
+
+SuperBullet: This class is a upper class of Bullet class. It has two functions. SuperBullet() for creates a new kind of bullet, which will crash any kinds of enemy with one shot, for player. The Update() is same as Bullet: Update().
+
+LeftBullet & RightBullet: Those classes are upper class of Bullet. They will create left side-shooting and right side-shooting bullets for player.
+
+Package1: This class is a upper class of Angel 2D’s build in Class: PhysicsActor. It has two functions. The Package1() will takes a variable of Angel 2D’s build in Class: Vector2 as input, and create a bullet package. If player get this package it will changes player’s current bullet to SuperBullet. 
+
+Package2: Similar to Package1 class. It will creates a package which will adds left side-shooting and right side-shooting bullets for player.
+
+
+[Resources]
+
+- Images
+ All image files are made by Yajun Shi
+ 
+- Sounds
+ All sound files are downloaded at http://www.2gei.com/sound/

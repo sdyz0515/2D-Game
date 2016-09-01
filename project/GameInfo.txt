@@ -1,0 +1,5 @@
+Press arrow keys to control directions, space to fire.
+
+When game is over, press R to reset.
+
+Press Esc to exit game.
